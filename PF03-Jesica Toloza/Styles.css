@@ -1,0 +1,140 @@
+/* Estilos de la página de bienvenida */
+.welcome-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('https://i.ibb.co/JjLRqtq/free-blank-map-asia-1-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome-page h1 {
+    font-size: 3em;
+    margin-bottom: 2.5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.welcome-page .subtitulo {
+    font-size: 1.8em;  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 30px; 
+}
+
+.welcome-page button {
+    padding: 20px 40px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.welcome-page button:hover {
+    transform: scale(1.1);
+    background-color: #0056b3;
+}
+
+/* Contenedor de las tarjetas */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 220px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    min-height: 320px; 
+    perspective: 1000px; /* Para el efecto 3D */
+    margin: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    object-fit: cover;
+}
+
+.card h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.card-inner {
+    position: relative;
+    width: 200px; 
+    height: 300px; 
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg); /* Rota la tarjeta al pasar el cursor */
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta la parte trasera al girar */
+}
+
+.card-back {
+    background-color: #f1f1f1; /* Color de fondo de la parte trasera */
+    transform: rotateY(180deg); /* Muestra la parte trasera cuando se gira */
+    padding: 20px; 
+} 
+
+/* Contenedor de filtros */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-container input, .filter-container select {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.main-interface h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+}
+
+#searchInput {
+    padding: 10px;
+    margin: 20px auto 30px;
+    width: 30%; 
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    display: block;
+    
+}

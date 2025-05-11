@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explora los países</title>
+    <link rel="icon" href="https://i.ibb.co/4j4RK0m/Favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Página de Bienvenida -->
+    <div id="welcomePage" class="welcome-page">
+        <h1>Descubre el mundo</h1>
+        <p class="subtitulo" >Conoce los diferentes países </p>
+        <button id="enterButton">Ver países</button>
+    </div>
+
+    <!-- Interfaz Principal -->
+    <div id="mainInterface" class="main-interface" style="display: none;">
+        <h1>Descubre los países del mundo</h1>
+        <input type="text" id="searchInput" placeholder="Buscar país...">
+        
+        <!-- Filtros -->
+        <div id="filters" class="filters">
+            <select id="regionFilter">
+                <option value="">Filtrar por Región</option>
+                <option value="Africa">África</option>
+                <option value="Americas">América</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europa</option>
+                <option value="Oceania">Oceanía</option>
+            </select>
+            <select id="populationFilter">
+                <option value="">Filtrar por Población</option>
+                <option value="small">Menos de 1 millón</option>
+                <option value="medium">1 a 10 millones</option>
+                <option value="large">Más de 10 millones</option>
+            </select>
+        </div>
+        
+        <!-- Contenedor de tarjetas -->
+        <div id="cardContainer" class="card-container"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
